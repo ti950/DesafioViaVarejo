@@ -5,4 +5,14 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="height_button">56dp</dimen>
+    <dimen name="height_elevation">4dp</dimen>
+    <dimen name="icon_size">32dp</dimen>
+
+    <dimen name="textSize">20sp</dimen>
+    <dimen name="textSizeHeaderTitle">14sp</dimen>
+    <dimen name="textSizeHeaderEmail">12sp</dimen>
+
+    <dimen name="headerImage">64dp</dimen>
 </resources>

@@ -1,4 +1,4 @@
-package com.pereira.tiago.desafioviavarejo.ui.tools
+package com.pereira.tiago.desafioviavarejo.ui.products
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.pereira.tiago.desafioviavarejo.R
 
-class ToolsFragment : Fragment() {
+class ProductsFragment : Fragment() {
 
-    private lateinit var toolsViewModel: ToolsViewModel
+    private lateinit var productsViewModel: ProductsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        toolsViewModel =
-            ViewModelProviders.of(this).get(ToolsViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_tools, container, false)
-        val textView: TextView = root.findViewById(R.id.text_tools)
-        toolsViewModel.text.observe(this, Observer {
+        productsViewModel =
+            ViewModelProviders.of(this).get(ProductsViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_products, container, false)
+        val textView: TextView = root.findViewById(R.id.text_products)
+        productsViewModel.text.observe(this, Observer {
             textView.text = it
         })
         return root
