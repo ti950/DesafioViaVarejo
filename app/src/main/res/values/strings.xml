@@ -14,4 +14,6 @@
 
     <string name="name">Nome Completo</string>
     <string name="email">nome@gmail.com</string>
+
+    <string name="img_product">Imagem do produto</string>
 </resources>

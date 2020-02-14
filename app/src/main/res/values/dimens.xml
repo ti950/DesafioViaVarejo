@@ -11,8 +11,11 @@
     <dimen name="icon_size">32dp</dimen>
 
     <dimen name="textSize">20sp</dimen>
+    <dimen name="textSizeOld">10sp</dimen>
     <dimen name="textSizeHeaderTitle">14sp</dimen>
     <dimen name="textSizeHeaderEmail">12sp</dimen>
+    <dimen name="textSizeVersionCod">18sp</dimen>
+    <dimen name="textSizeBig">36sp</dimen>
 
     <dimen name="headerImage">64dp</dimen>
 </resources>

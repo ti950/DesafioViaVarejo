@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_products"
         android:name="com.pereira.tiago.desafioviavarejo.ui.products.ProductsFragment"
         android:label="@string/menu_products"
         tools:layout="@layout/fragment_products" />

@@ -7,8 +7,12 @@
     <color name="colorBackground">#EEEEEE</color>
     <color name="colorTextWhiteAlpha">#DEFFFFFF</color>
     <color name="colorButton">#28B543</color>
+    <color name="colorBlackAlpha">#DE000000</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlackChar">#333333</color>
 
-    <color name="colorNavBackground">#015195</color>
     <color name="colorCircle">#E0E0E0</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorDivider">#E5E5E5</color>
+    <color name="colorGray">#CCCCCC</color>
 </resources>
