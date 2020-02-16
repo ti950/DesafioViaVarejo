@@ -13,7 +13,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/AppData/Local/Android/sdk/platforms/android-29/android.jar!/android/content/res/Resources.class">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Desktop/MyApplication/app/src/main/java/com/pereira/tiago/myapplication/MainActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Documents/desafio-mobile/app/src/main/java/com/pereira/tiago/desafio/mobile/base/Config.java">
           <value>
             <set />
           </value>
@@ -23,7 +33,202 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/MainActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/base/BaseRetrofit.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/base/BaseService.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/base/Config.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/base/ProductApiService.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/base/RetrofitInitializer.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/domain/Categorias.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/domain/DescontoFormaPagamento.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/domain/GaleriaMidia.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/domain/Imagens.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/domain/LojistaPadrao.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/domain/LojistasEmDestaque.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/domain/MaisInformacoes.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/domain/Marca.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/domain/Marketplace.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/domain/Modelo.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/domain/Opinioes.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/domain/Padrao.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/domain/Preco.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/domain/Produtos.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/domain/ResponseDetails.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/domain/ResponseEvaluation.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/domain/ResponseProducts.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/domain/ResponseSeeBuy.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/domain/SeeBuy.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/domain/Servicos.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/domain/Valores.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/interfaces/ContractDetails.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/interfaces/ContractProduct.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/model/DetailsModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/model/ProductModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/presenter/DetailsPresenter.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/presenter/ProductPresenter.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/ui/details/DetailsAdapter.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/ui/details/DetailsProductActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/ui/details/DetailsViewHolder.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/ui/details/SeeAdapter.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/ui/details/SeeViewHolder.kt">
           <value>
             <set />
           </value>
@@ -33,12 +238,32 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/ui/products/DividerItemDecoration.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/ui/products/ProductsAdapter.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/ui/products/ProductsFragment.kt">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/ui/products/ProductsViewHolder.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/pereira/tiago/desafioviavarejo/util/UtilFragment.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/drawable/divider.xml">
           <value>
             <set />
           </value>
@@ -129,6 +354,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../SAEMOVEL/app/src/main/java/com/cfc/pereira/saemovel/base/singletons/SingletonAula.java">
           <value>
             <set />
           </value>
