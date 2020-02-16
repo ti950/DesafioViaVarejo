@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">DesafioViaVarejo</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -16,4 +15,7 @@
     <string name="email">nome@gmail.com</string>
 
     <string name="img_product">Imagem do produto</string>
+
+    <string name="evaluation">avaliação</string>
+    <string name="evaluations">avaliações</string>
 </resources>

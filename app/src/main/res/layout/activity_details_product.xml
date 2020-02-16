@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:background="@color/colorDivider">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDivider"
+    android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clMain"
@@ -43,6 +45,8 @@
                 android:layout_marginTop="48dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
+                android:ellipsize="end"
+                android:maxLines="1"
                 android:text="Smart TV LED 43\u00E2\u0080\u009D Full HD ..."
                 android:textColor="@color/colorBlackAlpha"
                 android:textSize="@dimen/textSize"
@@ -59,6 +63,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
+                android:ellipsize="end"
+                android:maxLines="3"
                 android:text="Smart TV LED 32\ HD Samsung 32J4300 com Connect Share Movie, Screen Mirroring, Wi-Fi, Entradas HDMI e Entrada USB"
                 android:textColor="@color/colorText"
                 android:textSize="@dimen/textSizeHeaderTitle"
