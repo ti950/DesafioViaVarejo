@@ -17,15 +17,18 @@ class ProductPresenter : ContractProduct.ProductPresenter {
     }
 
     override fun getListProducts() {
+        view?.showLoading()
         model.getProducts()
     }
 
     override fun setListProducts(responseProducts: ResponseProducts) {
         view?.showResults(responseProducts)
+        view?.hideLoading()
     }
 
     override fun errorLoad(error: Throwable) {
         view?.showNoResults()
+        view?.hideLoading()
     }
 
 }
