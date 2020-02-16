@@ -19,5 +19,7 @@ interface ContractProduct {
     interface ProductView {
         fun showNoResults()
         fun showResults(responseProducts: ResponseProducts)
+        fun showLoading()
+        fun hideLoading()
     }
 }
