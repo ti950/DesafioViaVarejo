@@ -3,8 +3,10 @@ package com.pereira.tiago.desafioviavarejo.ui.details
 import Valores
 import android.content.Context
 import android.content.Intent
+import android.opengl.Visibility
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -74,7 +76,9 @@ class DetailsProductActivity : AppCompatActivity(), ContractDetails.DetailsView 
     }
 
     override fun showError() {
-        //
+        pbLoad.visibility = View.GONE
+        clMain.visibility = View.GONE
+        txtNoResults.visibility = View.VISIBLE
     }
 
     override fun showEvaluation(responseEvaluation: ResponseEvaluation) {
@@ -95,5 +99,17 @@ class DetailsProductActivity : AppCompatActivity(), ContractDetails.DetailsView 
         )
         rcvMoreProducts.layoutManager = layoutManager
         rcvMoreProducts.adapter = mAdapterSee
+    }
+
+    override fun hideLoading() {
+        pbLoad.visibility = View.GONE
+        clMain.visibility = View.VISIBLE
+        txtNoResults.visibility = View.GONE
+    }
+
+    override fun showLoading() {
+        pbLoad.visibility = View.VISIBLE
+        clMain.visibility = View.GONE
+        txtNoResults.visibility = View.GONE
     }
 }

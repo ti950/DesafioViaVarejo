@@ -60,16 +60,6 @@ class ProductsFragment : Fragment(), ProductsAdapter.Listener, ContractProduct.P
         val layoutManager : RecyclerView.LayoutManager = GridLayoutManager(activity, 2)
         rcvProducts.layoutManager = layoutManager
 
-        val verticalDecoration = DividerItemDecoration(
-            rcvProducts.context,
-            DividerItemDecoration.HORIZONTAL
-        )
-        val verticalDivider = ContextCompat.getDrawable(activity!!, R.drawable.vertical_divider)
-        if (verticalDivider != null) {
-            verticalDecoration.setDrawable(verticalDivider)
-        }
-        rcvProducts.addItemDecoration(verticalDecoration)
-
         val horizontalDecoration = DividerItemDecoration(
             rcvProducts.context,
             DividerItemDecoration.VERTICAL
