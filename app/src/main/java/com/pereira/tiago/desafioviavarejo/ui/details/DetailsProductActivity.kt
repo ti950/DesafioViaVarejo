@@ -17,6 +17,7 @@ import com.pereira.tiago.desafioviavarejo.domain.ResponseEvaluation
 import com.pereira.tiago.desafioviavarejo.domain.ResponseSeeBuy
 import com.pereira.tiago.desafioviavarejo.interfaces.ContractDetails
 import com.pereira.tiago.desafioviavarejo.presenter.DetailsPresenter
+import com.pereira.tiago.desafioviavarejo.util.Connection
 import kotlinx.android.synthetic.main.activity_details_product.*
 
 class DetailsProductActivity : AppCompatActivity(), ContractDetails.DetailsView {
@@ -29,6 +30,7 @@ class DetailsProductActivity : AppCompatActivity(), ContractDetails.DetailsView 
     }
 
     private var presenter: ContractDetails.DetailsPresenter? = null
+    private var connection: Connection? = Connection()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +43,8 @@ class DetailsProductActivity : AppCompatActivity(), ContractDetails.DetailsView 
             presenter = DetailsPresenter()
         }
         presenter!!.setView(this)
+        presenter!!.setContext(applicationContext)
+        presenter!!.setConnection(connection!!)
         presenter!!.loadDetails()
     }
 

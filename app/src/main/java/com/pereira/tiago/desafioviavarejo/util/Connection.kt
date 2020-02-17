@@ -9,7 +9,9 @@ open class Connection {
         var haveConnectedWifi = false
         var haveConnectedMobile = false
 
-        for (ni in (context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager).allNetworkInfo) {
+        val connectionManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+
+        for (ni in (connectionManager).allNetworkInfo) {
             if (ni.typeName.equals("WIFI", ignoreCase = true) && ni.isConnected) {
                 haveConnectedWifi = true
             }
