@@ -9,12 +9,14 @@ import com.pereira.tiago.desafioviavarejo.domain.ResponseEvaluation
 import com.pereira.tiago.desafioviavarejo.domain.ResponseSeeBuy
 import com.pereira.tiago.desafioviavarejo.interfaces.ContractDetails
 import com.pereira.tiago.desafioviavarejo.model.DetailsModel
+import com.pereira.tiago.desafioviavarejo.util.Connection
 import java.util.*
 
 class DetailsPresenter: ContractDetails.DetailsPresenter {
 
     private val model: ContractDetails.DetailsModel = DetailsModel(this)
     private var view: ContractDetails.DetailsView? = null
+    private var connection: Connection = Connection()
 
     override fun getContext(): Context = view as Context
 
@@ -23,9 +25,13 @@ class DetailsPresenter: ContractDetails.DetailsPresenter {
     }
 
     override fun loadDetails() {
-        model.getMainDetails()
-        model.getEvaluation()
-        model.getSeeBuy()
+        if (connection.haveNetworkConnection(getContext())) {
+            model.getMainDetails()
+            model.getEvaluation()
+            model.getSeeBuy()
+        } else {
+            view?.showError()
+        }
     }
 
     override fun dataDetails(responseDetails: ResponseDetails) {

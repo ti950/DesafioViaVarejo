@@ -48,7 +48,7 @@ class ProductsFragment : Fragment(), ProductsAdapter.Listener, ContractProduct.P
             presenter = ProductPresenter()
         }
         presenter!!.setView(this)
-        presenter!!.getListProducts()
+        presenter!!.getListProducts(context!!)
 
         return view
     }
@@ -86,8 +86,8 @@ class ProductsFragment : Fragment(), ProductsAdapter.Listener, ContractProduct.P
     }
 
     override fun showNoResults() {
-        rcvProducts.visibility = View.VISIBLE
-        txtNoResults.visibility = View.GONE
+        rcvProducts.visibility = View.GONE
+        txtNoResults.visibility = View.VISIBLE
     }
 
     override fun showResults(responseProducts: ResponseProducts) {

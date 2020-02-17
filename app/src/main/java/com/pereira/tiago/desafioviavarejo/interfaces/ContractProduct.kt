@@ -9,9 +9,8 @@ interface ContractProduct {
     }
 
     interface ProductPresenter {
-        fun getContext() : Context
         fun setView(view: ProductView)
-        fun getListProducts()
+        fun getListProducts(context: Context)
         fun setListProducts(responseProducts: ResponseProducts)
         fun errorLoad(error: Throwable)
     }
