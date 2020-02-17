@@ -30,5 +30,7 @@ interface ContractDetails {
         fun showError()
         fun showEvaluation(responseEvaluation: ResponseEvaluation)
         fun showSeeBuy(responseSeeBuy: List<ResponseSeeBuy>)
+        fun hideLoading()
+        fun showLoading()
     }
 }

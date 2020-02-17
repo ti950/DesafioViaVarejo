@@ -10,6 +10,7 @@ import com.pereira.tiago.desafioviavarejo.domain.ResponseSeeBuy
 import com.pereira.tiago.desafioviavarejo.interfaces.ContractDetails
 import com.pereira.tiago.desafioviavarejo.model.DetailsModel
 import com.pereira.tiago.desafioviavarejo.util.Connection
+import com.pereira.tiago.desafioviavarejo.util.NumberFormatUtil
 import java.util.*
 
 class DetailsPresenter: ContractDetails.DetailsPresenter {
@@ -17,6 +18,7 @@ class DetailsPresenter: ContractDetails.DetailsPresenter {
     private val model: ContractDetails.DetailsModel = DetailsModel(this)
     private var view: ContractDetails.DetailsView? = null
     private var connection: Connection = Connection()
+    private var numberFormatUtil: NumberFormatUtil = NumberFormatUtil()
 
     override fun getContext(): Context = view as Context
 
@@ -25,11 +27,13 @@ class DetailsPresenter: ContractDetails.DetailsPresenter {
     }
 
     override fun loadDetails() {
+        view?.showLoading()
         if (connection.haveNetworkConnection(getContext())) {
             model.getMainDetails()
             model.getEvaluation()
             model.getSeeBuy()
         } else {
+            view?.hideLoading()
             view?.showError()
         }
     }
@@ -37,9 +41,9 @@ class DetailsPresenter: ContractDetails.DetailsPresenter {
     override fun dataDetails(responseDetails: ResponseDetails) {
 
         responseDetails.modelo.padrao.preco.precoAnteriorText =
-            "R$ ${responseDetails.modelo.padrao.preco.precoAnterior}"
+                numberFormatUtil.formateValue(responseDetails.modelo.padrao.preco.precoAnterior)
         responseDetails.modelo.padrao.preco.precoAtualText =
-            "R$ ${responseDetails.modelo.padrao.preco.precoAtual}"
+                numberFormatUtil.formateValue(responseDetails.modelo.padrao.preco.precoAtual.toDouble())
 
         view?.showMainDetails(responseDetails = responseDetails)
 
@@ -73,5 +77,6 @@ class DetailsPresenter: ContractDetails.DetailsPresenter {
 
     override fun dataSeeBuy(responseSeeBuy: List<ResponseSeeBuy>) {
         view?.showSeeBuy(responseSeeBuy = responseSeeBuy)
+        view?.hideLoading()
     }
 }
