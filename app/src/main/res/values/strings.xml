@@ -1,0 +1,33 @@
+<resources>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Profile</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="title">Title</string>
+    <string name="menu">Menu</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_products">Produtos</string>
+
+    <string name="name">Nome Completo</string>
+    <string name="email">nome@gmail.com</string>
+
+    <string name="img_product">Imagem do produto</string>
+
+    <string name="evaluation">avaliação</string>
+    <string name="evaluations">avaliações</string>
+
+    <string name="name_desafio">DEV ANDROID</string>
+    <string name="app_version_code">VERSION (%1$d)</string>
+    <string name="app_version_name">version_code (%1$s)</string>
+    <string name="no_results">Nenhum produto encontrado!</string>
+
+    <string name="text_evaluation">AVALIAÇÕES</string>
+    <string name="last_comment">Último comentário:</string>
+    <string name="text_see_buy">QUEM VIU COMPROU</string>
+    <string name="button_buy">COMPRAR</string>
+    <string name="text_characteristics">CARACTERÍSTICAS</string>
+    <string name="text_see_installments">ver parcelamentos</string>
+</resources>
