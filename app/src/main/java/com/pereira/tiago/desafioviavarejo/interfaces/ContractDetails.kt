@@ -5,6 +5,7 @@ import android.content.Context
 import com.pereira.tiago.desafioviavarejo.domain.ResponseDetails
 import com.pereira.tiago.desafioviavarejo.domain.ResponseEvaluation
 import com.pereira.tiago.desafioviavarejo.domain.ResponseSeeBuy
+import com.pereira.tiago.desafioviavarejo.util.Connection
 
 interface ContractDetails {
 
@@ -15,7 +16,8 @@ interface ContractDetails {
     }
 
     interface DetailsPresenter {
-        fun getContext() : Context
+        fun setConnection(connection: Connection)
+        fun setContext(context: Context)
         fun setView(view: DetailsView)
         fun loadDetails()
         fun dataDetails(responseDetails: ResponseDetails)
@@ -30,5 +32,7 @@ interface ContractDetails {
         fun showError()
         fun showEvaluation(responseEvaluation: ResponseEvaluation)
         fun showSeeBuy(responseSeeBuy: List<ResponseSeeBuy>)
+        fun hideLoading()
+        fun showLoading()
     }
 }

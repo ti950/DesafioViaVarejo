@@ -10,26 +10,37 @@ import com.pereira.tiago.desafioviavarejo.domain.ResponseSeeBuy
 import com.pereira.tiago.desafioviavarejo.interfaces.ContractDetails
 import com.pereira.tiago.desafioviavarejo.model.DetailsModel
 import com.pereira.tiago.desafioviavarejo.util.Connection
+import com.pereira.tiago.desafioviavarejo.util.NumberFormatUtil
 import java.util.*
 
 class DetailsPresenter: ContractDetails.DetailsPresenter {
 
     private val model: ContractDetails.DetailsModel = DetailsModel(this)
     private var view: ContractDetails.DetailsView? = null
-    private var connection: Connection = Connection()
+    private var connection: Connection? = null
+    private var numberFormatUtil: NumberFormatUtil = NumberFormatUtil()
+    private var context: Context? = null
 
-    override fun getContext(): Context = view as Context
+    override fun setContext(context: Context) {
+        this.context = context
+    }
 
     override fun setView(view: ContractDetails.DetailsView) {
         this.view = view
     }
 
+    override fun setConnection(connection: Connection) {
+        this.connection = connection
+    }
+
     override fun loadDetails() {
-        if (connection.haveNetworkConnection(getContext())) {
+        view?.showLoading()
+        if (connection!!.haveNetworkConnection(context!!)) {
             model.getMainDetails()
             model.getEvaluation()
             model.getSeeBuy()
         } else {
+            view?.hideLoading()
             view?.showError()
         }
     }
@@ -37,9 +48,9 @@ class DetailsPresenter: ContractDetails.DetailsPresenter {
     override fun dataDetails(responseDetails: ResponseDetails) {
 
         responseDetails.modelo.padrao.preco.precoAnteriorText =
-            "R$ ${responseDetails.modelo.padrao.preco.precoAnterior}"
+                numberFormatUtil.formateValue(responseDetails.modelo.padrao.preco.precoAnterior)
         responseDetails.modelo.padrao.preco.precoAtualText =
-            "R$ ${responseDetails.modelo.padrao.preco.precoAtual}"
+                numberFormatUtil.formateValue(responseDetails.modelo.padrao.preco.precoAtual.toDouble())
 
         view?.showMainDetails(responseDetails = responseDetails)
 
@@ -62,9 +73,9 @@ class DetailsPresenter: ContractDetails.DetailsPresenter {
     override fun dataEvaluation(responseEvaluation: ResponseEvaluation) {
 
         val count = if (responseEvaluation.quantidade == 1)
-            getContext().resources.getString(R.string.evaluation)
+            context?.resources?.getString(R.string.evaluation)
         else
-            getContext().resources.getString(R.string.evaluations)
+            context?.resources?.getString(R.string.evaluations)
 
         responseEvaluation.qtdText = "(${responseEvaluation.quantidade} $count)"
 
@@ -73,5 +84,6 @@ class DetailsPresenter: ContractDetails.DetailsPresenter {
 
     override fun dataSeeBuy(responseSeeBuy: List<ResponseSeeBuy>) {
         view?.showSeeBuy(responseSeeBuy = responseSeeBuy)
+        view?.hideLoading()
     }
 }

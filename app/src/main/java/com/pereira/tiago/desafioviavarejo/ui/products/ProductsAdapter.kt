@@ -22,7 +22,8 @@ class ProductsAdapter (
     override fun getItemCount(): Int = dataList.count()
 
     override fun onBindViewHolder(holder: ProductsViewHolder, position: Int) {
-        holder.bind(dataList[position], listener)
+        val height = position % 2 != 0
+        holder.bind(dataList[position], listener, height)
     }
 
 }
