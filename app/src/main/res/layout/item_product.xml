@@ -30,6 +30,7 @@
         android:ellipsize="end"
         android:maxLines="2"
         android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/robotoregular"
         android:textSize="@dimen/textSizeHeaderEmail"
         app:layout_constraintEnd_toEndOf="@+id/imgProduct"
         app:layout_constraintStart_toStartOf="@+id/imgProduct"
@@ -41,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="end"
-        android:text="R$ 1.439,00"
+        android:fontFamily="@font/robotoregular"
         android:textColor="@color/colorText"
         android:textSize="@dimen/textSizeOld"
         app:layout_constraintEnd_toEndOf="@+id/imgProduct"
@@ -55,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:gravity="end"
-        android:text="R4 1.439,00"
+        android:fontFamily="@font/robotoregular"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="@dimen/textSizeHeaderEmail"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -63,5 +64,14 @@
         app:layout_constraintStart_toStartOf="@+id/imgProduct"
         app:layout_constraintTop_toBottomOf="@+id/txtOldPrice"
         app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/viewHeight"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#22000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

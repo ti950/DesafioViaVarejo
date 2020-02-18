@@ -3,8 +3,10 @@ package com.pereira.tiago.desafioviavarejo.ui.details
 import Valores
 import android.content.Context
 import android.content.Intent
+import android.opengl.Visibility
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +17,7 @@ import com.pereira.tiago.desafioviavarejo.domain.ResponseEvaluation
 import com.pereira.tiago.desafioviavarejo.domain.ResponseSeeBuy
 import com.pereira.tiago.desafioviavarejo.interfaces.ContractDetails
 import com.pereira.tiago.desafioviavarejo.presenter.DetailsPresenter
+import com.pereira.tiago.desafioviavarejo.util.Connection
 import kotlinx.android.synthetic.main.activity_details_product.*
 
 class DetailsProductActivity : AppCompatActivity(), ContractDetails.DetailsView {
@@ -27,6 +30,7 @@ class DetailsProductActivity : AppCompatActivity(), ContractDetails.DetailsView 
     }
 
     private var presenter: ContractDetails.DetailsPresenter? = null
+    private var connection: Connection? = Connection()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +43,8 @@ class DetailsProductActivity : AppCompatActivity(), ContractDetails.DetailsView 
             presenter = DetailsPresenter()
         }
         presenter!!.setView(this)
+        presenter!!.setContext(applicationContext)
+        presenter!!.setConnection(connection!!)
         presenter!!.loadDetails()
     }
 
@@ -74,7 +80,9 @@ class DetailsProductActivity : AppCompatActivity(), ContractDetails.DetailsView 
     }
 
     override fun showError() {
-        //
+        pbLoad.visibility = View.GONE
+        clMain.visibility = View.GONE
+        txtNoResults.visibility = View.VISIBLE
     }
 
     override fun showEvaluation(responseEvaluation: ResponseEvaluation) {
@@ -95,5 +103,17 @@ class DetailsProductActivity : AppCompatActivity(), ContractDetails.DetailsView 
         )
         rcvMoreProducts.layoutManager = layoutManager
         rcvMoreProducts.adapter = mAdapterSee
+    }
+
+    override fun hideLoading() {
+        pbLoad.visibility = View.GONE
+        clMain.visibility = View.VISIBLE
+        txtNoResults.visibility = View.GONE
+    }
+
+    override fun showLoading() {
+        pbLoad.visibility = View.VISIBLE
+        clMain.visibility = View.GONE
+        txtNoResults.visibility = View.GONE
     }
 }

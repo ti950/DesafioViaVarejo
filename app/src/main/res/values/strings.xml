@@ -18,4 +18,17 @@
 
     <string name="evaluation">avaliação</string>
     <string name="evaluations">avaliações</string>
+
+    <string name="name_desafio">DEV ANDROID</string>
+    <string name="app_version_code">VERSION (%1$d)</string>
+    <string name="app_version_name">version_code (%1$s)</string>
+    <string name="no_results">Nenhum produto encontrado!</string>
+    <string name="text_error">Problemas para carregar os dados!</string>
+
+    <string name="text_evaluation">AVALIAÇÕES</string>
+    <string name="last_comment">Último comentário:</string>
+    <string name="text_see_buy">QUEM VIU COMPROU</string>
+    <string name="button_buy">COMPRAR</string>
+    <string name="text_characteristics">CARACTERÍSTICAS</string>
+    <string name="text_see_installments">ver parcelamentos</string>
 </resources>
