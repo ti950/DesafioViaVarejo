@@ -17,18 +17,25 @@ class DetailsPresenter: ContractDetails.DetailsPresenter {
 
     private val model: ContractDetails.DetailsModel = DetailsModel(this)
     private var view: ContractDetails.DetailsView? = null
-    private var connection: Connection = Connection()
+    private var connection: Connection? = null
     private var numberFormatUtil: NumberFormatUtil = NumberFormatUtil()
+    private var context: Context? = null
 
-    override fun getContext(): Context = view as Context
+    override fun setContext(context: Context) {
+        this.context = context
+    }
 
     override fun setView(view: ContractDetails.DetailsView) {
         this.view = view
     }
 
+    override fun setConnection(connection: Connection) {
+        this.connection = connection
+    }
+
     override fun loadDetails() {
         view?.showLoading()
-        if (connection.haveNetworkConnection(getContext())) {
+        if (connection!!.haveNetworkConnection(context!!)) {
             model.getMainDetails()
             model.getEvaluation()
             model.getSeeBuy()
@@ -66,9 +73,9 @@ class DetailsPresenter: ContractDetails.DetailsPresenter {
     override fun dataEvaluation(responseEvaluation: ResponseEvaluation) {
 
         val count = if (responseEvaluation.quantidade == 1)
-            getContext().resources.getString(R.string.evaluation)
+            context?.resources?.getString(R.string.evaluation)
         else
-            getContext().resources.getString(R.string.evaluations)
+            context?.resources?.getString(R.string.evaluations)
 
         responseEvaluation.qtdText = "(${responseEvaluation.quantidade} $count)"
 
